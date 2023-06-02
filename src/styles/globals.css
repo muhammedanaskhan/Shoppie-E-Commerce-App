@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap");
 
+@font-face {
+  font-family: "Clash";
+  src: url("/assets/fonts/ClashDisplay-Semibold.woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *:after,
 *::before {
@@ -22,16 +29,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-size: 6rem;
-}
+
 p {
   font-size: 2rem;
-  font-weight: 600;
   word-spacing: 3px;
 }
 @media only screen and (max-width: 900px) {

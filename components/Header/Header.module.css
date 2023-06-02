@@ -58,6 +58,12 @@
         display: flex;
     }
 
+    .header{
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
     .DesktopView{
         display: none;
     }

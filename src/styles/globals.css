@@ -34,6 +34,35 @@ p {
   font-size: 2rem;
   word-spacing: 3px;
 }
+
+
+:root {
+  --black: #000000;
+  --dark: #161616;
+  --primary: #6947bf;
+  --neutral100: #eaf0f2;
+  --neutral200: #d6dfe4;
+  --neutral300: #c1ccd6;
+  --neutral400: #adb8c9;
+  --neutral500: #98a1bb;
+  --neutral600: #7a8196;
+  --neutral700: #5b6170;
+  --neutral800: #2d3039;
+  --neutral900: #1e2026;
+  --red: #ff3344;
+  --yellow: #f9c94e;
+  --blue: #b4d7f9;
+  --green: #2fefb1;
+  --orange-accent: #fd7346;
+  --orange-accent-light: #ff9e7d;
+  --theme_bg: #f7f5f2;
+  --grayish: #dfdfde;
+  --bluish: #8d8daa;
+  --pinkish: #f56d91;
+  --orange: #ff4800;
+}
+
+
 @media only screen and (max-width: 900px) {
   html {
     font-size: 55%;

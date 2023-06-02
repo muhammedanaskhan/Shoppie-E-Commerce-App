@@ -1,0 +1,65 @@
+.header{
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  height: 49.5px;
+}
+
+.MobileView{
+    display: none;
+}
+
+.DesktopView{
+    display: flex;
+    gap: 7rem;
+}
+.DesktopView a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    color: #000000;
+}
+.DesktopView p{
+    font-size: 2rem;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 2; 
+    font-weight: 500px;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+.btn{
+     background-color: hsla(0, 0%, 100%, 1);
+  display: flex;
+  align-items: center;
+  color: black;
+  max-width: max-content;
+  font-size: 1.2rem;
+  min-width: max-content;
+  padding: 10px 25px;
+  letter-spacing: 2px;
+    line-height: 2; 
+  border: 2px solid hsla(0, 0%, 7%, 1);
+  box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+  font-weight: 400px;
+  transition: 250ms ease;
+}
+
+@media only screen and (max-width: 1120px) {
+    .MobileView{
+        display: flex;
+    }
+
+    .DesktopView{
+        display: none;
+    }
+}
+  

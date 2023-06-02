@@ -1,9 +1,12 @@
 .heroContainer{
+    display: flex;
+    align-items: center;
+    padding-left: 15rem;
     background-image: url("https://huckberry.imgix.net/pages/3-0_featured_365shorts_2303-7b9c3911e0.jpg?auto=format%2C%20compress&amp;crop=top&amp;fit=clip&amp;cs=tinysrgb&amp;ixlib=react-9.5.2") ;
     height: 80vh;
     background-size: cover;
-    padding-top: 12rem;
-    padding-left: 15rem;
+    /* padding-top: 12rem;
+    padding-left: 15rem; */
 }
 .shopContainer{ 
     font-family: "Clash";

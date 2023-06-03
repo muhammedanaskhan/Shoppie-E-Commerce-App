@@ -3,6 +3,8 @@ import styles from '/components/Header/Header.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import MobileMenu from '../MobileMenu/MobileMenu';
+import LocalMallIcon from '@mui/icons-material/LocalMall';
+
 function Header() {
 
     const navLinks = {
@@ -41,10 +43,13 @@ function Header() {
               </div>
               <div className={styles.DesktopView}>
                   <Link style={{textDecoration: 'none'}} href='/'><p>HOME</p></Link>
-                  <Link style={{textDecoration: 'none'}} href='/'><p>PORTFOLIO</p></Link>
-                  <Link style={{textDecoration: 'none'}} href='/'><p>BLOG</p></Link>
                   <Link style={{textDecoration: 'none'}} href='/'><p>SHOP</p></Link>
-                  <button href="#" className={styles.btn}>CONTACT US</button>
+                  <Link style={{textDecoration: 'none'}} href='/'><p>ABOUt</p></Link>
+                  <button className={styles.cartBtn}>
+                    <div className={styles.cartDiv}><LocalMallIcon fontSize='large'/></div>
+                    <span className={styles.cartSpan}>Cart</span> <span className={styles.numSpan}>(02)</span>
+                  </button>
+                  <button href="#" className={styles.btn}>SIGN IN</button>
               </div>
           </div>
       </div>

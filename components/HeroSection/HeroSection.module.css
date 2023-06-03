@@ -57,6 +57,12 @@
     box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
 }
 
+.btn:is(:hover, :focus-visible) { 
+    box-shadow: none; 
+    cursor: pointer; 
+    transform: scale(1.025) perspective(1px)
+}
+
 @media only screen and (max-width: 1742px) {
     .heroContainer{
         height: 80vh;

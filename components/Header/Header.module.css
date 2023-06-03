@@ -36,6 +36,12 @@
     font-family: "Raleway", sans-serif;
 }
 
+.DesktopView p:is(:hover, :focus-visible) { 
+    box-shadow: none; 
+    cursor: pointer; 
+    transform: scale(1.02) perspective(1px)
+}
+
 .btn{
      background-color: hsla(0, 0%, 100%, 1);
   display: flex;
@@ -51,6 +57,46 @@
   box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
   font-weight: 400px;
   transition: 250ms ease;
+}
+
+.cartBtn{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    font-size: 2rem;
+    gap: 5px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 2;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.cartBtn:is(:hover, :focus-visible) {
+    box-shadow: none; 
+    cursor: pointer; 
+    transform: scale(1.02) perspective(1px)
+}
+
+.cartSpan{
+    font-family: "Raleway", sans-serif;
+    font-weight: 500px;
+}
+
+.numSpan{
+    font-weight: 100px;
+}
+
+
+.cartDiv{
+    transform: translateY(2px);
+}
+.btn:is(:hover, :focus-visible) { 
+    box-shadow: none; 
+    cursor: pointer; 
+    transform: scale(1.025) perspective(1px)
 }
 
 @media only screen and (max-width: 1120px) {

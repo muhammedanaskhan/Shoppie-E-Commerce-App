@@ -84,6 +84,16 @@
     /* transform: translateY(-2px); */
 }
   
+
+.auth_change p {
+  color: #8e8e8e !important;
+  font-size: 1.5rem;
+}
+.auth_change p span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
   @media only screen and (max-width: 1000px) {
     .formContainer{
       width: 550px;

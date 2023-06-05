@@ -18,17 +18,17 @@ function Header() {
                 link: "/shop"
             },
             {
-                name: "BLOG",
-                link: "/shop"
+                name: "ABOUT",
+                link: "/about"
             },
            
             {
-                name: "PORTFOLIO",
-                link: "/portfolio"
+                name: "CART",
+                link: "/cart"
             },
             {
-                name: "CONTACT",
-                link: "/contact"
+                name: "SIGN IN",
+                link: "/signIn"
             },
         ],}
 

@@ -4,7 +4,7 @@ import SignIn from '../../../components/SignIn/SignIn'
 import SignUp from '../../../components/SignUp/SignUp'
 
 
-function index() {
+function Index() {
 
     var [signIn, setSignIn] = useState(true) 
 
@@ -22,4 +22,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

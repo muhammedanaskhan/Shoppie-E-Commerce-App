@@ -26,6 +26,8 @@
     color: #000000;
 }
 .DesktopView p{
+    display: inline-block;
+    position: relative;
     font-size: 2rem;
     color: #000000;
     text-transform: uppercase;
@@ -36,11 +38,30 @@
     font-family: "Raleway", sans-serif;
 }
 
-.DesktopView p:is(:hover, :focus-visible) { 
+.DesktopView p:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+
+.DesktopView p:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+/* .DesktopView p:is(:hover, :focus-visible) { 
     box-shadow: none; 
     cursor: pointer; 
     transform: scale(1.02) perspective(1px)
-}
+} */
 
 .btn{
      background-color: hsla(0, 0%, 100%, 1);
@@ -74,16 +95,49 @@
     border: none;
 }
 
-.cartBtn:is(:hover, :focus-visible) {
-    box-shadow: none; 
-    cursor: pointer; 
-    transform: scale(1.02) perspective(1px)
+.cartBtn:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
+
+.cartBtn:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
 .cartSpan{
+    display: inline-block;
+    position: relative;
     font-family: "Raleway", sans-serif;
     font-weight: 500px;
 }
+
+.cartSpan:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .cartSpan:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 
 .numSpan{
     font-weight: 100px;

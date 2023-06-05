@@ -25,23 +25,25 @@ function SignIn(props) {
 
   return (
     <div  className={styles.main}>
-      <div className={styles.auth_heading}>
-        <h3>Create Your Account</h3>
+      <div className={styles.formContainer}>
+          <div className={styles.auth_heading}>
+            <h3>Create Your Account</h3>
+          </div>
+          <form onSubmit={authHandler}>
+            <div className={styles.form_input_group}>
+                <input type="email" placeholder="Email" ref={emailRef} />
+            </div>
+            <div className={styles.form_input_group}>
+                <input type="password" placeholder="Password" ref={passwordRef} min="6" />
+            </div>
+            <div className={styles.form_input_group}>
+                <button className={styles.btn}>Sign In</button>
+            </div>
+            <div className={styles.form_input_group}>
+                <button onClick={demoUserSignIn} className={styles.btn}>Demo User</button>
+            </div>
+          </form>
       </div>
-      <form onSubmit={authHandler}>
-        <div className={styles.form_input_group}>
-            <input type="email" placeholder="Email" ref={emailRef} />
-        </div>
-        <div className={styles.form_input_group}>
-            <input type="password" placeholder="Password" ref={passwordRef} min="6" />
-        </div>
-        <div className={styles.form_input_group}>
-            <button className={styles.btn}>Sign In</button>
-        </div>
-        <div className={styles.form_input_group}>
-            <button onClick={demoUserSignIn} className={styles.btn}>Demo User</button>
-        </div>
-      </form>
     </div>
   )
 }

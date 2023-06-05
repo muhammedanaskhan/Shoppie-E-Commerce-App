@@ -49,7 +49,9 @@ function Header() {
                     <div className={styles.cartDiv}><LocalMallIcon fontSize='large'/></div>
                     <span className={styles.cartSpan}>Cart</span> <span className={styles.numSpan}>(02)</span>
                   </button>
-                  <button href="#" className={styles.btn}>SIGN IN</button>
+                  <Link href='/signIn'>
+                    <button href="#" className={styles.btn}>SIGN IN</button>
+                  </Link>
               </div>
           </div>
       </div>

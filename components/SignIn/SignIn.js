@@ -45,7 +45,7 @@ function SignIn(props) {
           </form>
       </div>
       <div className={styles.auth_change}>  
-        <p>Don't have an account? <span onClick={toggleSignUp}>Sign Up</span></p>
+        <p>Don&apos;t have an account? <span onClick={toggleSignUp}>Sign Up</span></p>
       </div>
     </div>
   )

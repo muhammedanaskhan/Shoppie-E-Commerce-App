@@ -1,9 +1,15 @@
-// this will create  new user
+// this will take request from form create  new user
 import hashPassword from '../../../../lib/auth';
-import {connectToDb} from '/lib/db';
+import connectToDb from '../../../../lib/db';
+
 
 async function handler(req, res) {
 
+  
+    if(req.method !== 'POST'){
+        return;
+    }
+     
     const data = req.body;
 
     const {email, password} = data;
@@ -13,9 +19,19 @@ async function handler(req, res) {
         return;
     }
 
-  const client= await connectToDb();
-  const db = client.db  // access the db
+    let client;
+    try {
+        client = await connectToDb();
+        if (!client) throw new Error('Database Connection Failed');
+    }
+    catch (error) {
+        client?.close();
+        res.status(503).json({ error: error.message });
+        return;
+    }
 
+  const db = client.db()  // access the db
+    console.log("d",db)
   const hashedPassword = hashPassword(password)
 
   // create a new user and store in db
@@ -23,6 +39,10 @@ async function handler(req, res) {
         email: email,
         password: hashedPassword
     });
+
+    // After the database operation, close the client connection
+    client.close();
+
 
     res.status(201).json({message: 'created user!'})
 

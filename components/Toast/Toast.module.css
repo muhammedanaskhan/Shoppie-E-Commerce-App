@@ -1,0 +1,36 @@
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 4px;
+    opacity: 0;
+    border: 1px solid black;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999999999;
+  }
+  
+  .toast.visible {
+    opacity: 1;
+  }
+  
+  .toast-content {
+    display: inline-block;
+    color: black;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .toast-close {
+    display: inline-block;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  

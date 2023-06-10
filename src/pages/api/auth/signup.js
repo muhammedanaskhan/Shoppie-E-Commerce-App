@@ -31,7 +31,17 @@ async function handler(req, res) {
     }
 
   const db = client.db()  // access the db
-    console.log("d",db)
+
+  //check if the requested email already exists
+
+  const existingUser = await db.collection('users').findOne({email: email})
+
+  if(existingUser){
+    res.status(422).json({message: 'User already exists'})
+    client?.close()
+    return;
+  }
+
   const hashedPassword = hashPassword(password)
 
   // create a new user and store in db
@@ -40,11 +50,10 @@ async function handler(req, res) {
         password: hashedPassword
     });
 
+    res.status(201).json({message: 'created user!'})
+
     // After the database operation, close the client connection
     client.close();
-
-
-    res.status(201).json({message: 'created user!'})
 
 }
 

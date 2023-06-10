@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import styles from "/components/SignUp/SignUp.module.css"
 import Spinner from '../Spinner/spinner';
+import Toast from '../Toast/Toast';
 
 function SignUp(props) {
 
@@ -29,6 +30,11 @@ function SignUp(props) {
       const data = await response.json();
       if(response.status === 201){
         setLoader(false)
+      }
+
+      if(response.status === 422){
+        setLoader(false);
+        console.log("user already exists")
       }
   
       if(!response.ok){
@@ -60,6 +66,8 @@ function SignUp(props) {
       e.preventDefault();
       //logIn("test@test.com", "123456789");
   }
+
+  
   return (
     <div  className={styles.main}>
       {loader && <Spinner/>}

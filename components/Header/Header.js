@@ -5,9 +5,12 @@ import Link from 'next/link'
 import MobileMenu from '../MobileMenu/MobileMenu';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 
-import { useSession } from 'next-auth/react'; 
+import { signOut, useSession } from 'next-auth/react'; 
+import { useRouter } from 'next/router';
 
 function Header() {
+
+    const router = useRouter();
 
     const navLinks = {
         authlinks: [
@@ -36,6 +39,13 @@ function Header() {
 
         const { data: session, status } = useSession()         //session = describe active session; loading = nextjs figuring out login
    
+    async function handleLogOut(){
+       
+        signOut();
+        
+    }
+
+    
   return (
       <div className={styles.header}>
           <div className={styles.logo}>
@@ -60,7 +70,13 @@ function Header() {
                         <button href="#" className={styles.btn}>SIGN IN</button>
                     </Link>
                   }
-                  
+                  {session && 
+                        <button href="#" 
+                            className={styles.btn}
+                            onClick={handleLogOut}>
+                            LOG OUT
+                        </button>  
+                  }
               </div>
           </div>
       </div>

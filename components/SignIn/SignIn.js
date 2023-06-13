@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import styles from "/components/SignIn/SignIn.module.css"
-
+import {signIn} from 'next-auth/react'
 function SignIn(props) {
 
   const emailRef = useRef();
@@ -13,8 +13,18 @@ function SignIn(props) {
     }
 
     async function authHandler(e) {
-      // setLoading(true);
-      // e.preventDefault();
+      e.preventDefault();
+
+      const enteredEmail = emailRef.current.value;
+      const enteredPassword = passwordRef.current.value;
+
+      const result = await signIn('credentials',{ 
+        redirect: false,
+        email: enteredEmail,
+        password: enteredPassword,
+      })
+      console.log(result);
+      
     }
 
     async function demoUserSignIn(e) {

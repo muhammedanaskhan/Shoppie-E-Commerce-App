@@ -5,6 +5,8 @@ import Link from 'next/link'
 import MobileMenu from '../MobileMenu/MobileMenu';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 
+import { useSession } from 'next-auth/react'; 
+
 function Header() {
 
     const navLinks = {
@@ -32,6 +34,8 @@ function Header() {
             },
         ],}
 
+        const { data: session, status } = useSession()         //session = describe active session; loading = nextjs figuring out login
+   
   return (
       <div className={styles.header}>
           <div className={styles.logo}>
@@ -45,13 +49,18 @@ function Header() {
                   <Link style={{textDecoration: 'none'}} href='/'><p>HOME</p></Link>
                   <Link style={{textDecoration: 'none'}} href='/'><p>SHOP</p></Link>
                   <Link style={{textDecoration: 'none'}} href='/'><p>ABOUt</p></Link>
-                  <button className={styles.cartBtn}>
-                    <div className={styles.cartDiv}><LocalMallIcon fontSize='large'/></div>
-                    <span className={styles.cartSpan}>Cart</span> <span className={styles.numSpan}>(02)</span>
-                  </button>
-                  <Link href='/signIn'>
-                    <button href="#" className={styles.btn}>SIGN IN</button>
-                  </Link>
+                  {session && 
+                    <button className={styles.cartBtn}>
+                        <div className={styles.cartDiv}><LocalMallIcon fontSize='large'/></div>
+                        <span className={styles.cartSpan}>Cart</span> <span className={styles.numSpan}>(02)</span>
+                    </button>
+                  }
+                  {!session && 
+                    <Link href='/signIn'>
+                        <button href="#" className={styles.btn}>SIGN IN</button>
+                    </Link>
+                  }
+                  
               </div>
           </div>
       </div>

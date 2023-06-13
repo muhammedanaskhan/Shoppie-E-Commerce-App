@@ -1,7 +1,11 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import styles from "/components/SignIn/SignIn.module.css"
 import {signIn} from 'next-auth/react'
+import Spinner from '../Spinner/spinner';
+
 function SignIn(props) {
+
+  const [loader, setLoader] = useState(false);
 
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -15,6 +19,8 @@ function SignIn(props) {
     async function authHandler(e) {
       e.preventDefault();
 
+      setLoader(true)
+
       const enteredEmail = emailRef.current.value;
       const enteredPassword = passwordRef.current.value;
 
@@ -23,6 +29,8 @@ function SignIn(props) {
         email: enteredEmail,
         password: enteredPassword,
       })
+      
+      setLoader(false)
       console.log(result);
       
     }
@@ -35,6 +43,7 @@ function SignIn(props) {
 
   return (
     <div  className={styles.main}>
+      {loader && <Spinner/>}
       <div className={styles.formContainer}>
           <div className={styles.auth_heading}>
             <h3>Log In</h3>

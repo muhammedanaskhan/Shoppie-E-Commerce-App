@@ -15,8 +15,8 @@ function Index() {
   return (
     <>
         <Header/>
-        {!signIn && <SignIn toggleSignInUp={toggleSignInUp}/>}
-        {signIn && <SignUp toggleSignInUp={toggleSignInUp}/>}
+        {signIn && <SignIn toggleSignInUp={toggleSignInUp}/>}
+        {!signIn && <SignUp toggleSignInUp={toggleSignInUp}/>}
         
     </>
   )

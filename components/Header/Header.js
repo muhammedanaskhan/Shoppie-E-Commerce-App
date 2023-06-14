@@ -42,6 +42,7 @@ function Header() {
     async function handleLogOut(){
        
         signOut();
+
         
     }
 
@@ -59,12 +60,12 @@ function Header() {
                   <Link style={{textDecoration: 'none'}} href='/'><p>HOME</p></Link>
                   <Link style={{textDecoration: 'none'}} href='/'><p>SHOP</p></Link>
                   <Link style={{textDecoration: 'none'}} href='/'><p>ABOUt</p></Link>
-                  {session && 
+                  
                     <button className={styles.cartBtn}>
                         <div className={styles.cartDiv}><LocalMallIcon fontSize='large'/></div>
                         <span className={styles.cartSpan}>Cart</span> <span className={styles.numSpan}>(02)</span>
                     </button>
-                  }
+                  
                   {!session && 
                     <Link href='/signIn'>
                         <button href="#" className={styles.btn}>SIGN IN</button>

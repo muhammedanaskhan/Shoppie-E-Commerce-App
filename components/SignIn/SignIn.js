@@ -2,38 +2,41 @@ import React, { useRef, useState } from 'react'
 import styles from "/components/SignIn/SignIn.module.css"
 import {signIn} from 'next-auth/react'
 import Spinner from '../Spinner/spinner';
+import { useRouter } from 'next/router';
 
 function SignIn(props) {
 
   const [loader, setLoader] = useState(false);
-
+  const router = useRouter()
   const emailRef = useRef();
   const passwordRef = useRef();
 
-    var {toggleSignInUp} = props;
+  var {toggleSignInUp} = props;
 
-    const toggleSignUp = () => {
-        toggleSignInUp()
+  const toggleSignUp = () => {
+      toggleSignInUp()
+  }
+
+  async function authHandler(e) {
+    e.preventDefault();
+
+    setLoader(true)
+
+    const enteredEmail = emailRef.current.value;
+    const enteredPassword = passwordRef.current.value;
+
+    const result = await signIn('credentials',{ 
+      redirect: false,
+      email: enteredEmail,
+      password: enteredPassword,
+    })
+    
+    setLoader(false)
+    if(!result.error){
+      router.replace('/')
     }
-
-    async function authHandler(e) {
-      e.preventDefault();
-
-      setLoader(true)
-
-      const enteredEmail = emailRef.current.value;
-      const enteredPassword = passwordRef.current.value;
-
-      const result = await signIn('credentials',{ 
-        redirect: false,
-        email: enteredEmail,
-        password: enteredPassword,
-      })
-      
-      setLoader(false)
-      console.log(result);
-      
-    }
+    
+  }
 
     async function demoUserSignIn(e) {
       setLoading(true);

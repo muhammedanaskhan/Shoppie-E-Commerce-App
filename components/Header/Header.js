@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from '/components/Header/Header.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 function Header() {
 
     const router = useRouter();
+    const { data: session, status } = useSession()         //session = describe active session; loading = nextjs figuring out login
 
     const navLinks = {
         authlinks: [
@@ -37,15 +38,13 @@ function Header() {
             },
         ],}
 
-        const { data: session, status } = useSession()         //session = describe active session; loading = nextjs figuring out login
-   
-    async function handleLogOut(){
-       
+    async function handleLogOut(){   
         signOut();
-
-        
     }
 
+    const handleCartClick = () => {
+        router.push('/cart')
+    }
     
   return (
       <div className={styles.header}>
@@ -61,7 +60,7 @@ function Header() {
                   <Link style={{textDecoration: 'none'}} href='/'><p>SHOP</p></Link>
                   <Link style={{textDecoration: 'none'}} href='/'><p>ABOUt</p></Link>
                   
-                    <button className={styles.cartBtn}>
+                    <button className={styles.cartBtn} onClick={handleCartClick}>
                         <div className={styles.cartDiv}><LocalMallIcon fontSize='large'/></div>
                         <span className={styles.cartSpan}>Cart</span> <span className={styles.numSpan}>(02)</span>
                     </button>

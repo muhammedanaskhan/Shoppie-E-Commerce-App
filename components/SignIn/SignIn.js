@@ -39,9 +39,19 @@ function SignIn(props) {
   }
 
     async function demoUserSignIn(e) {
-      setLoading(true);
+      setLoader(true);
       e.preventDefault();
-      //logIn("test@test.com", "123456789");
+      
+      const result = await signIn('credentials',{ 
+        redirect: false,
+        email: 'test@test.com',
+        password: '1110210226',
+      })
+      
+      setLoader(false)
+      if(!result.error){
+        router.replace('/')
+      }
   }
 
   return (

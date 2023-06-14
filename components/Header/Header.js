@@ -13,31 +13,6 @@ function Header() {
     const router = useRouter();
     const { data: session, status } = useSession()         //session = describe active session; loading = nextjs figuring out login
 
-    const navLinks = {
-        authlinks: [
-            {
-                name: "HOME",
-                link: "/"
-            },
-            {
-                name: "SHOP",
-                link: "/shop"
-            },
-            {
-                name: "ABOUT",
-                link: "/about"
-            },
-           
-            {
-                name: "CART",
-                link: "/cart"
-            },
-            {
-                name: "SIGN IN",
-                link: "/signIn"
-            },
-        ],}
-
     async function handleLogOut(){   
         signOut();
     }
@@ -53,7 +28,7 @@ function Header() {
           </div>
           <div className={styles.right}>
               <div className={styles.MobileView}>
-                <MobileMenu links={navLinks.authlinks}/>
+                <MobileMenu/>
               </div>
               <div className={styles.DesktopView}>
                   <Link style={{textDecoration: 'none'}} href='/'><p>HOME</p></Link>

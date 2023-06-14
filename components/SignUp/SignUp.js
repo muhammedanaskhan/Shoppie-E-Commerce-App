@@ -2,11 +2,15 @@ import React, { useRef, useState } from 'react'
 import styles from "/components/SignUp/SignUp.module.css"
 import Spinner from '../Spinner/spinner';
 import Toast from '../Toast/Toast';
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/router';
 
 function SignUp(props) {
 
   const [loader, setLoader] = useState(false)
   
+  const router = useRouter()
+
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -64,7 +68,17 @@ function SignUp(props) {
     async function demoUserSignIn(e) {
       setLoader(true);
       e.preventDefault();
-      //logIn("test@test.com", "123456789");
+      
+      const result = await signIn('credentials',{ 
+        redirect: false,
+        email: 'test@test.com',
+        password: '1110210226',
+      })
+      
+      setLoader(false)
+      if(!result.error){
+        router.replace('/')
+      }
   }
 
   

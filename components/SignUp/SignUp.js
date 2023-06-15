@@ -32,8 +32,18 @@ function SignUp(props) {
       })
   
       const data = await response.json();
-      if(response.status === 201){
+      if(response.status === 201){ //created account
+
+        const result = await signIn('credentials',{  //signin with created acc
+          redirect: false,
+          email: email,
+          password: password,
+        })
         setLoader(false)
+        if(!result.error){
+          router.replace('/')
+        }
+
       }
 
       if(response.status === 422){

@@ -19,8 +19,10 @@ const MobileMenu = ({ links }) => {
 
     return (
         <nav className={`${classes.nav} ${active && classes['active']}`}>
-            <div className={`${classes.nav_hamburger} ${active && classes['active']}`} onClick={() => setActive(prev => !prev)}>
-                <div className={classes.bar}></div>
+            <div className={classes.hamDiv}>
+                <div className={`${classes.nav_hamburger} ${active && classes['active']}`} onClick={() => setActive(prev => !prev)}>
+                    <div className={classes.bar}></div>
+                </div>
             </div>
             {active && <div className={classes.menu}>
                 <div className={classes.nav_list}>

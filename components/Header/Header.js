@@ -37,7 +37,7 @@ function Header() {
                   
                     <button className={styles.cartBtn} onClick={handleCartClick}>
                         <div className={styles.cartDiv}><LocalMallIcon fontSize='large'/></div>
-                        <span className={styles.cartSpan}>Cart</span> <span className={styles.numSpan}>(02)</span>
+                        <span className={styles.numSpan}>(02)</span>
                     </button>
                   
                   {!session && 

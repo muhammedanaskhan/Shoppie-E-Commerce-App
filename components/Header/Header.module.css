@@ -16,7 +16,7 @@
 
 .DesktopView{
     display: flex;
-    gap: 7rem;
+    gap: 5rem;
 }
 .DesktopView a{
     display: flex;

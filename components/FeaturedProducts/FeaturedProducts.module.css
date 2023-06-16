@@ -37,6 +37,7 @@
 }
 
 .btn{
+    margin-top: 35px;
     background-color: hsla(18, 97%, 62%, 1);;
  display: flex;
  align-items: center;

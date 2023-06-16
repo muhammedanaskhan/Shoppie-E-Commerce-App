@@ -1,0 +1,146 @@
+.main{
+    display: flex;
+    align-items: center;
+    padding-left: 15rem;
+    background-image: url("https://img.businessoffashion.com/resizer/CpyUQT2z9nzsN87N0UsEBYEwOJI=/1600x0/filters:format(jpg):quality(70):focal(45x-5:55x5)/cloudfront-eu-central-1.images.arcpublishing.com/businessoffashion/H2IQ72ELJ5CZXKP2E2CK25OUFM.jpg") ;
+    height: 750px;
+    background-size: cover;
+}
+
+
+
+.shopContainer{ 
+    padding-inline: 90px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-family: "Clash";
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 50rem;
+    letter-spacing: 0.2rem;
+    align-items: flex-start;
+
+}
+
+.heading{
+    width: 100%;
+    font-size: 6.2rem;
+    font-weight: 500px;
+    color: black;
+}
+
+.subHeading{
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-top: 2rem;
+    color: black;
+    font-weight: 100;
+}
+
+.a{
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.btn{
+    background-color: hsla(18, 97%, 62%, 1);;
+ display: flex;
+ align-items: center;
+ color: black;
+ max-width: max-content;
+ font-size: 1.2rem;
+ min-width: max-content;
+ padding: 15px 45px;
+ letter-spacing: 2px;
+ margin-top: 30px;
+   line-height: 2; 
+ border: 2px solid hsla(0, 0%, 7%, 1);
+ box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+ font-weight: 400px;
+ transition: 250ms ease;
+}
+
+.btn:is(:hover, :focus-visible) { 
+    box-shadow: none; 
+    cursor: pointer; 
+    transform: scale(1.025) perspective(1px)
+}
+@media only screen and (max-width: 1742px) {
+    .main{
+        height: 750px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .shopContainer{ 
+        width: 100%;
+    }
+
+    .main{
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+    
+}
+
+
+@media only screen and (max-width: 931px) {
+
+    .main{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 555px) {
+
+
+    
+.shopContainer{ 
+    padding-inline: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+}
+
+@media only screen and (max-width: 503px) {
+
+    .shopContainer{ 
+        padding-inline: 40px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    
+    .heading{
+        width: 100%;
+        font-size: 4rem;
+        font-weight: 500px;
+        color: black;
+    }
+
+    .subHeading{
+        font-size: 14px;
+        font-family: sans-serif;
+        margin-top: 2rem;
+        color: black;
+        font-weight: 100;
+    }
+
+    .btn{
+     padding: 12px 25px;
+    }
+
+    .main{
+
+        background-image: url("https://img.businessoffashion.com/resizer/CpyUQT2z9nzsN87N0UsEBYEwOJI=/1600x0/filters:format(jpg):quality(70):focal(45x-5:55x5)/cloudfront-eu-central-1.images.arcpublishing.com/businessoffashion/H2IQ72ELJ5CZXKP2E2CK25OUFM.jpg") ;
+        height: 550px;
+        background-size: cover;
+    }
+    }

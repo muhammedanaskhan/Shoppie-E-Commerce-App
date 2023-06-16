@@ -16,6 +16,12 @@ function FeaturedProducts() {
                 )}
             </div>
         </div>
+        <div>
+            <button href="/shop" 
+                className={classes.btn}>
+                VIEW ALL PRODUCTS
+            </button> 
+        </div>
     </div>
   )
 }

@@ -5,6 +5,7 @@ import Footer from '/components/Footer/Footer'
 
 import styles from '@/styles/Home.module.css'
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts'
+import OfferSection from '../../components/OfferSection/OfferSection'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Header/>
         <HeroSection/>
         <FeaturedProducts/>
+        <OfferSection/>
         <Footer/>
     </>
   )

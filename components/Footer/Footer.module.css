@@ -1,0 +1,194 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    flex-direction: column;
+    background-color: #D8DFDC;
+}
+
+.content{
+    width: 70%;
+    display: flex;
+    height: 60%;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.leftDiv{
+    width: 50%;
+    padding-top: 5rem;
+    display: flex;
+    grid-gap: 10rem;
+    gap: 10rem;
+}
+
+.company p {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+}
+
+.explore{
+    color: black;
+}
+.exploreLinks p {
+    width: 250px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: .6;
+    letter-spacing: .3rem;
+}
+
+.exploreLinks ul {
+    padding-top: 2rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.exploreLinks ul li {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.rightDiv{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.rightDiv form{
+    display: flex;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    grid-gap: 2rem;
+    gap: 2rem;
+    position: relative;
+}
+
+.rightDiv form p {
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: .6;
+    letter-spacing: .3rem;
+}
+
+.formInput{
+    width: 100%;
+    display: flex;
+}
+
+.formInput input {
+    width: 100%;
+    color: black;
+    font-size: 1.5rem;
+    background: #D8DFDC;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.formInput button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    margin-left: -6rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.socials{
+    display: flex;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.extraLinks{
+    width: 70%;
+    padding-top: 1rem;
+    color: black;
+}
+
+.extraLinks ul {
+    list-style: none;
+    display: -moz-box;
+    display: flex;
+    grid-gap: 1rem;
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 1330px) {
+    .company{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 873px) {
+
+    .main{
+        height: auto;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .leftDiv{
+        padding-top: 0;
+    }
+    .content{
+        flex-direction: column;
+        border-bottom: none;
+        width: 100%;
+        height: 80%;
+        border-bottom: 1px solid black;
+    }
+
+    .rightDiv{
+        width: 303.42px;
+        padding-top: 2rem;
+        padding-bottom: 20px;
+        
+    }
+
+    .extraLinks{
+        width: 100%;
+        /* padding-left: 3rem;
+        padding-right: 3rem; */
+    }
+}
+
+@media only screen and (max-width: 363px) {
+    .rightDiv form p {
+        font-size: 1.7rem;
+        letter-spacing: .2rem;
+    }
+
+    .rightDiv{
+        width: 250.42px;
+    }
+
+    .exploreLinks p {
+        width: 250px;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        opacity: .6;
+        letter-spacing: .2rem;
+    }
+}

@@ -14,7 +14,7 @@ export default function Home() {
         <HeroSection/>
         <FeaturedProducts/>
         <OfferSection/>
-        {/* <Footer/> */}
+        <Footer/>
     </>
   )
 }

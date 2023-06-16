@@ -50,7 +50,7 @@ function Footer() {
           <li>Terms &amp; Conditions</li>
           <li>Privacy Policy</li>
           <li>Purchase Policy</li>
-          <li> ©2021 Neuro. No rights reserved</li>
+          <li> ©2023 Shoppie. No rights reserved</li>
         </ul>
       </div>
     </div>

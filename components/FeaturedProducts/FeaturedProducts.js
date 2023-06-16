@@ -11,8 +11,8 @@ function FeaturedProducts() {
         <div className={classes.container}>
             <h2 className={classes.heading}>Explore new arrivals</h2>
             <div className={classes.products}>
-                {featureProducts.map((product) => 
-                    <ProductCard props={product} />
+                {featureProducts.map((product, i) => 
+                    <ProductCard props={product} key={i}/>
                 )}
             </div>
         </div>

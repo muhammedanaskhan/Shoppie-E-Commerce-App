@@ -10,12 +10,9 @@ function ProductCard(props) {
     <div className={styles.card}>
         <div  className={styles.imageDiv}>
             <Image 
-                className={styles.img}
-                src={product.image}
-                width={448}
-                height={470} 
-                loading="lazy" 
+                src={product.image} 
                 alt="Product Image" 
+                fill={true}
             />
         </div>
         <div className={styles.content}>

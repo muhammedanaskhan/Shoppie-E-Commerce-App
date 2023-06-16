@@ -37,7 +37,7 @@ const MobileMenu = ({ links }) => {
                 </div>
                 <div className={classes.footer}>
                 <div className={classes.logo}>
-                    <Image src='/assets/images/logo_white.svg' fill={true}></Image>
+                    <Image src='/assets/images/logo_white.svg' fill={true} alt='logo'></Image>
                 </div>
                 </div>
             </div>}

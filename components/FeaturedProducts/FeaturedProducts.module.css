@@ -4,6 +4,8 @@
     padding-top: 150px;
     padding-bottom: 150px;
     color: black;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .container{
@@ -13,6 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .heading{
@@ -30,3 +33,24 @@
     gap: 5rem;
     row-gap: 8rem;
 }
+
+@media only screen and (max-width: 790px) {
+    .heading {
+        font-size: 40px;
+    }
+  }
+
+  
+@media only screen and (max-width: 510px) {
+    .heading {
+        font-size: 30px;
+    }
+
+    .main{
+
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+  }
+
+    

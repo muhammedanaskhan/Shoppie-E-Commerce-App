@@ -24,7 +24,7 @@ function Header() {
   return (
       <div className={styles.header}>
           <div className={styles.logo}>
-              <Image src='/assets/images/logo.svg' width={132} height={27}></Image>
+              <Image src='/assets/images/logo.svg' width={132} height={27} alt='logo'></Image>
           </div>
           <div className={styles.right}>
               <div className={styles.MobileView}>

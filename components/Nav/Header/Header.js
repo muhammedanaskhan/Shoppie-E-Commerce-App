@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import styles from '/components/Header/Header.module.css'
+import styles from '/components/Nav/Header/Header.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import MobileMenu from '../MobileMenu/MobileMenu';
@@ -32,7 +32,7 @@ function Header() {
               </div>
               <div className={styles.DesktopView}>
                   <Link style={{textDecoration: 'none'}} href='/'><p>HOME</p></Link>
-                  <Link style={{textDecoration: 'none'}} href='/'><p>SHOP</p></Link>
+                  <Link style={{textDecoration: 'none'}} href='/products'><p>SHOP</p></Link>
                   <Link style={{textDecoration: 'none'}} href='/'><p>ABOUt</p></Link>
                   
                     <button className={styles.cartBtn} onClick={handleCartClick}>

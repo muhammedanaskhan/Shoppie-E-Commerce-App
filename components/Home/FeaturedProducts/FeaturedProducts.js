@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from "./FeaturedProducts.module.css";
-import { featureProducts } from '../../constants/constants';
+import { featureProducts } from '../../../constants/constants';
 import ProductCard from '../ProductCard/ProductCard';
 
 

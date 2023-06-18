@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "/components/ProductCard/ProductCard.module.css"
+import styles from "/components/Home/ProductCard/ProductCard.module.css"
 import Image from 'next/image'
 import Link from 'next/link'
 

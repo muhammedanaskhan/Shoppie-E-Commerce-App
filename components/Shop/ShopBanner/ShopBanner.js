@@ -1,8 +1,10 @@
-import classes from './AllProducts.module.css'
+import classes from './ShopBanner.module.css'
 
 import React from 'react'
 
-function AllProducts() {
+function ShopBanner() {
+
+
   return (
     <div className={classes.banner}>
         <h1 className={classes.slogan}>Walk in for the Fashion, <br/>Stay in for the Style.</h1>
@@ -10,4 +12,4 @@ function AllProducts() {
   )
 }
 
-export default AllProducts
+export default ShopBanner

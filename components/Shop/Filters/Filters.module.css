@@ -1,0 +1,142 @@
+/* .container{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.25px solid gray !important;
+} */
+
+.desktopDiv{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.25px solid gray !important;
+}
+
+.mobileDiv{
+    color: black;
+    display: none;
+    flex-wrap: wrap;
+}
+
+.leftFilters{
+    display: flex;
+width: fit-content;
+}
+
+.filter{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.25px solid gray;
+    border-bottom: none;
+    border-top: none;
+    height: 38px !important;
+    background-color: #FEFEFF;
+    padding: 10px 20px;
+    gap: 7px;
+}
+
+.activeFilter{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px !important;
+    border: 0.25px solid gray;
+    border-bottom: none;
+    background-color:  rgb(231, 228, 228);
+    padding: 10px 20px;
+    gap: 7px;
+}
+
+
+.filter h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+}
+
+.activeFilter h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+}
+.expandIcon{
+    width: 3rem !important;
+    height: 3rem !important;
+    font-weight: 300 !important;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 845px) {
+    .filter{
+        padding: 8px 15px;
+        gap: 4px;
+    }
+    
+    .activeFilter{
+        padding: 8px 15px;
+        gap: 4px;
+    }
+    
+    
+    .filter h3{
+        font-size: 1.5rem;
+    }
+    
+    .activeFilter h3{
+        font-size: 1.5rem;
+    }
+    .expandIcon{
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+}
+    
+@media screen and (max-width: 550px) {
+
+
+    .filter{
+    
+        border-bottom: 0.25px solid gray;
+    }
+    
+    .activeFilter{
+
+        border-bottom: 0.25px solid gray;
+
+    }
+
+    .desktopDiv{
+        display: none;
+    }
+
+    .mobileDiv{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 315px) {
+    .filter{
+        padding: 6px 10px;
+        gap: 4px;
+    }
+    
+    .activeFilter{
+        padding: 6px 10px;
+        gap: 4px;
+    }
+    
+    
+    .filter h3{
+        font-size: 1.25rem;
+    }
+    
+    .activeFilter h3{
+        font-size: 1.25rem;
+    }
+    .expandIcon{
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+    }
+}
+

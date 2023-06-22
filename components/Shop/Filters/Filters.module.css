@@ -253,9 +253,9 @@ width: fit-content;
   
   .categoryFilter {
     height: 102px !important;
-    display: grid;
+   /*  display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 3rem 1rem !important; 
+    grid-gap: 3rem 1rem !important;  */
   }
 
   .categoryFilter div:first-child {
@@ -311,6 +311,28 @@ width: fit-content;
         display: flex;
         border-right: 0.25px solid gray !important;;
     }
+}
+
+@media screen and (max-width: 463px) {
+    .checkboxContainer{
+        display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+}
+@media screen and (max-width: 397px) {
+
+    .checkboxContainer{
+        display: flex;
+        padding-left: 20px;
+        padding-right: 10px;
+      }
+    .categoryFilter div:first-child {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 0.5rem 2.5rem !important;
+      }
+    
 }
 
 @media screen and (max-width: 315px) {

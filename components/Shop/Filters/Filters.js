@@ -73,6 +73,25 @@ const Filters = () => {
         }
     }
 
+    const closeFilter = () => {
+        console.log("close filter called")
+        const filterContainer = document.querySelector(`.${classes.filterContainer}`);
+        if (filterContainer) {
+          filterContainer.classList.add(classes.fadeOut);
+          filterContainer.addEventListener('animationend', () => {
+            filterContainer.remove();
+          });
+        }
+        setOpenFilter({
+          price: false,
+          category: false,
+          size: false,
+          rating: false,
+          sortBy: false,
+        });
+      };
+      
+
   return (
     <div className={classes.container}>
         <div className={classes.desktopDiv}>
@@ -94,7 +113,7 @@ const Filters = () => {
                     <ArrowDropDownIcon className={`${classes.expandIcon} ${openFilter.rating && classes.activeIcon}`}/>
                 </div>
                 {Object.values(openFilter).some((item) => item) && (
-                    <Filter filter={openFilter} />
+                    <Filter filter={openFilter} closeFilter={closeFilter}/>
                 )}
             </div>
             <div className={classes.rightFilters}>
@@ -125,6 +144,9 @@ const Filters = () => {
                     <h3>SORT BY</h3>
                     <ArrowDropDownIcon className={`${classes.expandIcon} ${openFilter.rating && classes.activeIcon}`}/>
                 </div>
+                {Object.values(openFilter).some((item) => item) && (
+                    <Filter filter={openFilter} closeFilter={closeFilter} />
+                )}
         </div>
     </div>
   )
@@ -132,17 +154,22 @@ const Filters = () => {
 
 export default Filters
 
-const Filter = ({filter}) => {
+const Filter = ({filter, closeFilter}) => {
     console.log("filter", filter)
     return(
         <div className={classes.filterContainer}>
-            {filter.price && <PriceFilter/>}
-            {filter.category && <CategoryFilter/>}
-            {filter.size && <SizeFilter/>}
-            {filter.rating && <RatingFilter/>}
-            <button className={classes.filterResetBtn}>
-                Remove All Filters
-            </button>
+            <div className={classes.filterTop}>
+                 {filter.price && <PriceFilter/>}
+                {filter.category && <CategoryFilter/>}
+                {filter.size && <SizeFilter/>}
+                {filter.rating && <RatingFilter/>}
+            </div>
+           
+            <div className={classes.filterBottom}>
+                <button className={classes.clearBtn}>CLEAR ALL</button>
+                <button className={classes.applyBtn} onClick={closeFilter}>CLOSE</button>
+            </div>
         </div>
+        
     )
 }

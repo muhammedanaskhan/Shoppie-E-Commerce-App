@@ -29,7 +29,7 @@ const MobileMenu = ({ links }) => {
                     <ul>
                         <li onClick={() => setActive(prev => !prev)}>  <Link href="/products">Shop All</Link></li>
                         {session && <li onClick={() => setActive(prev => !prev)}><Link href="/">Home</Link></li>}
-                        <li onClick={() => setActive(prev => !prev)}><Link href="/Shop">Shop</Link></li>
+                        <li onClick={() => setActive(prev => !prev)}><Link href="/products">Shop</Link></li>
                         {/* <li onClick={() => setActive(prev => !prev)}> <Link href="/About"></Link></li> */}
                         {!session && <li onClick={() => setActive(prev => !prev)}><Link href="/signIn">Sign in</Link></li>}
                         {session && <li onClick={logoutHandler}>Sign Out</li>}

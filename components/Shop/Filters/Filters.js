@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import classes from './Filters.module.css'
+import PriceFilter from './PriceFilter';
+import CategoryFilter from './CategoryFilter';
+import SizeFilter from './SizeFilter';
+import RatingFilter from './RatingFilter';
 
 
 const Filters = () => {
@@ -69,8 +73,6 @@ const Filters = () => {
         }
     }
 
-    console.log(openFilter.price)
-
   return (
     <div className={classes.container}>
         <div className={classes.desktopDiv}>
@@ -91,6 +93,9 @@ const Filters = () => {
                     <h3>RATING</h3>
                     <ArrowDropDownIcon className={`${classes.expandIcon} ${openFilter.rating && classes.activeIcon}`}/>
                 </div>
+                {Object.values(openFilter).some((item) => item) && (
+                    <Filter filter={openFilter} />
+                )}
             </div>
             <div className={classes.rightFilters}>
                 <div className={`${openFilter.sortBy ? classes.activeFilter : classes.filter}`} onClick={() => toggleFilter('sortby')}>
@@ -126,3 +131,18 @@ const Filters = () => {
 }
 
 export default Filters
+
+const Filter = ({filter}) => {
+    console.log("filter", filter)
+    return(
+        <div className={classes.filterContainer}>
+            {filter.price && <PriceFilter/>}
+            {filter.category && <CategoryFilter/>}
+            {filter.size && <SizeFilter/>}
+            {filter.rating && <RatingFilter/>}
+            <button className={classes.filterResetBtn}>
+                Remove All Filters
+            </button>
+        </div>
+    )
+}

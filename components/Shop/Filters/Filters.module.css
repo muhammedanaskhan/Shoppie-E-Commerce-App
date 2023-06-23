@@ -474,6 +474,26 @@ width: fit-content;
         padding-right: 20px;
       }
 }
+
+@media screen and (max-width: 414px) {
+  .ratingCheckboxContainer{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+
+}
+
+
+@media screen and (max-width: 375px) {
+  .ratingFilter div:first-child {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 1rem !important;
+  }
+
+}
 @media screen and (max-width: 397px) {
 
     .checkboxContainer{

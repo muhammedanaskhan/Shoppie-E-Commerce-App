@@ -5,6 +5,7 @@ import PriceFilter from './PriceFilter';
 import CategoryFilter from './CategoryFilter';
 import SizeFilter from './SizeFilter';
 import RatingFilter from './RatingFilter';
+import SortFilter from './SortFilter';
 
 
 const Filters = () => {
@@ -163,6 +164,7 @@ const Filter = ({filter, closeFilter}) => {
                 {filter.category && <CategoryFilter/>}
                 {filter.size && <SizeFilter/>}
                 {filter.rating && <RatingFilter/>}
+                {filter.sortBy && <SortFilter/>}
             </div>
            
             <div className={classes.filterBottom}>

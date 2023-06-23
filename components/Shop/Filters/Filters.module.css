@@ -164,6 +164,36 @@ width: fit-content;
   .categoryFilter{
     height: 49px !important;
   }
+
+  .sizeFilter{
+    height: 49px !important;
+  }
+
+  .ratingFilter{
+    height: 49px !important;
+  }
+
+  .sortFilter{
+    height: 49px !important;
+  }
+
+  .sortFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 5rem !important;
+  }
+
+    
+  .ratingFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 5rem !important;
+  }
+
   
   .categoryFilter div:first-child {
     display: flex !important;
@@ -173,7 +203,21 @@ width: fit-content;
     gap: 5rem !important;
   }
 
+  .sizeFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 5rem !important;
+  }
+
   .checkboxContainer{
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .ratingCheckboxContainer{
     display: flex;
     padding-left: 100px;
     padding-right: 100px;
@@ -200,6 +244,30 @@ width: fit-content;
       opacity: 1;
       transform: translateY(100%);
     }
+  }
+
+  @media screen and (max-width: 1439px){
+    
+  .ratingFilter{
+    display: flex;
+    justify-content: center;
+    height: 102px !important;
+  }
+
+    
+  .ratingFilter div:first-child {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 5rem !important;
+  }
+
+  .ratingCheckboxContainer{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   }
 
 @media screen and (max-width: 900px) {
@@ -264,6 +332,32 @@ width: fit-content;
     grid-gap: 1rem 5rem !important;
   }
 
+  .sizeFilter div:first-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem 5rem !important;
+  }
+
+  .ratingFilter{
+    display: flex;
+    justify-content: center;
+    height: 102px !important;
+  }
+
+    
+  .ratingFilter div:first-child {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 5rem !important;
+  }
+
+  .ratingCheckboxContainer{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
 
   .checkboxContainer{
     display: flex;
@@ -282,6 +376,58 @@ width: fit-content;
         width: 2rem !important;
         height: 2rem !important;
     }
+}
+
+@media screen and (max-width: 763px) {
+
+  .sortFilter{
+    height: 49px !important;
+  }
+
+  .sortFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 629px) {
+
+  .sortFilter{
+    height: 102px !important;
+  }
+
+  .sortFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+  }
+}
+
+
+@media screen and (max-width: 620px) {
+  .ratingCheckboxContainer{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .ratingFilter div:first-child {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 2rem !important;
+  }
+}
+
+@media screen and (max-width: 779px) {
+  .sizeFilter{
+    height: 102px !important;
+  }
 }
     
 @media screen and (max-width: 612px) {
@@ -313,6 +459,14 @@ width: fit-content;
     }
 }
 
+@media screen and (max-width: 488px) {
+  .sizeFilter div:first-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 0.5rem 2.5rem !important;
+  }
+}
+
 @media screen and (max-width: 463px) {
     .checkboxContainer{
         display: flex;
@@ -332,7 +486,23 @@ width: fit-content;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         grid-gap: 0.5rem 2.5rem !important;
       }
+
+      .sizeFilter div:first-child {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 0.5rem 2.5rem !important;
+      }
     
+}
+
+
+@media screen and (max-width: 355px) {
+  .sizeFilter div:first-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 0.5rem 1rem !important;
+  }
+  
 }
 
 @media screen and (max-width: 315px) {

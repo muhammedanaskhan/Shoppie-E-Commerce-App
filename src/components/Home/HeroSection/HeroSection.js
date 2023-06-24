@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "/components/Home/HeroSection/HeroSection.module.css"
+import styles from "@/components/Home/HeroSection/HeroSection.module.css"
 import Link from 'next/link'
 function HeroSection() {
   return (

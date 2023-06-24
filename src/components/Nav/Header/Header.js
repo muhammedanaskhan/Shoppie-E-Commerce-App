@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import styles from '/components/Nav/Header/Header.module.css'
+import styles from '@/components/Nav/Header/Header.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import MobileMenu from '../MobileMenu/MobileMenu';
+import MobileMenu from '@/components/Nav/MobileMenu/MobileMenu';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
 
 import { signOut, useSession } from 'next-auth/react'; 

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import styles from "./SignIn.module.css"
 import {signIn} from 'next-auth/react'
-import Spinner from '../../Spinner/spinner';
+import Spinner from '@/components/Spinner/spinner';
 import { useRouter } from 'next/router';
 
 function SignIn(props) {

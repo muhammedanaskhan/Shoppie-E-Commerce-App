@@ -4,7 +4,7 @@ import styles from "./SignUp.module.css"
 
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
-import Spinner from '../../Spinner/spinner';
+import Spinner from '@/components/Spinner/spinner';
 
 function SignUp(props) {
 

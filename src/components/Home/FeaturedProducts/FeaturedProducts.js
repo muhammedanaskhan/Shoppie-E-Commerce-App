@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from "./FeaturedProducts.module.css";
-import { featureProducts } from '../../../constants/constants';
-import ProductCard from '../ProductCard/ProductCard';
+import { featureProducts } from '@/constants/constants';
+import ProductCard from '@/components/Home/ProductCard/ProductCard';
 
 
 function FeaturedProducts() {

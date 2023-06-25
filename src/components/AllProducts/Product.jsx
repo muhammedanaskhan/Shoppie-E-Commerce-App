@@ -38,6 +38,7 @@ function Product({
             />
             </Link>
             {trending && <p className={classes.trending}>Trending</p>}
+            {size ? <p className={classes.size}>{size}</p> : null}
             <FavoriteBorderIcon className={classes.favourite} sx={{ color: "black" }} />
         </div>
         <div className={classes.bottom}>

@@ -37,6 +37,21 @@
     color: #fff;
   }
 
+  .size{
+   position: absolute;
+   font-size: 1.75rem;
+   font-family: "Raleway", sans-serif;
+   background-color: black;
+   flex: 0;
+   padding: 8px 10px;
+   display: inline-block;
+   color: #fff;
+   position: absolute;
+   bottom: 2.5px;
+   right: 0px;
+  }
+
+
   .favourite {
     position: absolute;
     top: 0.5rem;

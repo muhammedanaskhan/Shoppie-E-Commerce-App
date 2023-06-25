@@ -415,25 +415,6 @@ const accessories = [
         in_stock: true
     },
     {
-        _id: "3e4f5a6b-7c8d-9e0a-1b2c3d4e",
-        images: [
-            "https://ik.imagekit.io/averno2301/Vestir/Products/Accesories/Nautilus_Messenger_Bag-1_q5YqssdQN.webp?updatedAt=1684511056687",
-            "https://ik.imagekit.io/averno2301/Vestir/Products/Accesories/Nautilus_Messenger_Bag-2_K9MbGBHkL.webp?updatedAt=1684511056662"
-        ],
-        category: "Accessories",
-        rating: "4.6",
-        size: "XL",
-        description: `The Nautilus Messenger Bag is made with durable recycled ripstop nylon, treated with a water-based wax DWR coating for protection against the elements without harsh chemicals. With an adjustable shoulder strap, internal laptop sleeve and essentials pocket, this messenger bag is built for wherever the day leads.`,
-        title: "Nautilus Messenger Bag",
-        type: "Bag",
-        trending: true,
-        original_price: "4999",
-        price: "3999",
-        delivery_time: "2",
-        reviews: "150",
-        in_stock: true
-    },
-    {
         _id: "9a8b7c8d-1e2f-3a4b-5c6d-7f9g0b1c",
         images: [
             "https://ik.imagekit.io/averno2301/Vestir/Products/Accesories/Fisherman_Beanie-1_VFtN8qEPB.webp?updatedAt=1684511215728",

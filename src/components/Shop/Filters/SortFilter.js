@@ -5,17 +5,25 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
 import styles from "./Filters.module.css";
+import { useFilter } from '@/context/FilterContext';
 
 const SortFilter = () => {
+
+  const { sortBy, sort } = useFilter();
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    sort(value);
+  };
+
   return (
     <div className={styles.sortFilter}>
         <FormGroup className={styles.checkboxContainer}>
             <FormControlLabel
             control={
                 <Checkbox
-                //   checked={category.includes("Men")}
-                //   onChange={handleChange}
-                value={"low to high"}
+                onChange={handleChange}
+                value={"price-low-to-high"}
                 inputProps={{ "aria-label": "controlled" }}
                 sx={{'& .MuiSvgIcon-root': { fontSize: 28 } }}
                 />
@@ -25,9 +33,8 @@ const SortFilter = () => {
             <FormControlLabel
             control={
                 <Checkbox
-                //   checked={category.includes("Women")}
-                //   onChange={handleChange}
-                value={"high to low"}
+                onChange={handleChange}
+                value={"price-high-to-low"}
                 inputProps={{ "aria-label": "controlled" }}
                 sx={{'& .MuiSvgIcon-root': { fontSize: 28 } }}
                 />

@@ -6,6 +6,7 @@ import CategoryFilter from './CategoryFilter';
 import SizeFilter from './SizeFilter';
 import RatingFilter from './RatingFilter';
 import SortFilter from './SortFilter';
+import { useFilter } from '@/context/FilterContext';
 
 
 const Filters = () => {
@@ -156,6 +157,9 @@ const Filters = () => {
 export default Filters
 
 const Filter = ({filter, closeFilter}) => {
+
+    const {clearFilters} = useFilter();
+
     console.log("filter", filter)
     return(
         <div className={classes.filterContainer}>
@@ -168,7 +172,7 @@ const Filter = ({filter, closeFilter}) => {
             </div>
            
             <div className={classes.filterBottom}>
-                <button className={classes.clearBtn}>CLEAR ALL</button>
+                <button className={classes.clearBtn}  onClick={clearFilters}>CLEAR ALL</button>
                 <button className={classes.applyBtn} onClick={closeFilter}>CLOSE</button>
             </div>
         </div>

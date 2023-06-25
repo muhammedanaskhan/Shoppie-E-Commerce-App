@@ -5,30 +5,26 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
 import styles from "./Filters.module.css";
+import { useFilter } from '@/context/FilterContext';
 
 const RatingFilter = () => {
+
+  const { rating, filterByRating } = useFilter();
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    filterByRating(value);
+  };
+
   return (
     <div className={styles.ratingFilter}>
     <FormGroup className={styles.ratingCheckboxContainer}>
         
         <FormControlLabel
-          control={
-              <Checkbox
-              //   checked={category.includes("Accessories")}
-              //   onChange={handleChange}
-              value={"5 stars"}
-              inputProps={{ "aria-label": "controlled" }}
-              sx={{'& .MuiSvgIcon-root': { fontSize: 28 } }}
-              />
-        }
-        label="★★★★★"
-        />
-        <FormControlLabel
         control={
             <Checkbox
-            //   checked={category.includes("Men")}
-            //   onChange={handleChange}
-            value={"4 stars & above"}
+            onChange={handleChange}
+            value="4"
             inputProps={{ "aria-label": "controlled" }}
             sx={{'& .MuiSvgIcon-root': { fontSize: 28 } }}
             />
@@ -38,9 +34,8 @@ const RatingFilter = () => {
         <FormControlLabel
         control={
             <Checkbox
-            //   checked={category.includes("Women")}
-            //   onChange={handleChange}
-            value={"3 stars & above"}
+            onChange={handleChange}
+            value="3"
             inputProps={{ "aria-label": "controlled" }}
             sx={{'& .MuiSvgIcon-root': { fontSize: 28 } }}
             />
@@ -50,9 +45,8 @@ const RatingFilter = () => {
         <FormControlLabel
         control={
             <Checkbox
-            //   checked={category.includes("Accessories")}
-            //   onChange={handleChange}
-            value={"2 stars & above"}
+            onChange={handleChange}
+            value="2"
             inputProps={{ "aria-label": "controlled" }}
             sx={{'& .MuiSvgIcon-root': { fontSize: 28 } }}
             />
@@ -62,9 +56,8 @@ const RatingFilter = () => {
         <FormControlLabel
         control={
             <Checkbox
-            //   checked={category.includes("Accessories")}
-            //   onChange={handleChange}
-            value={"1 star & above"}
+            onChange={handleChange}
+            value="1"
             inputProps={{ "aria-label": "controlled" }}
             sx={{'& .MuiSvgIcon-root': { fontSize: 28 } }}
             />

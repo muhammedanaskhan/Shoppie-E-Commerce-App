@@ -4,16 +4,20 @@ import ShopBanner from '@/components/Shop/ShopBanner/ShopBanner'
 import Filters from '@/components/Shop/Filters/Filters'
 import Products from '@/components/AllProducts/Products'
 import products from '@/constants/constants'
+import { FilterProvider, useFilter } from '@/context/FilterContext'
+import ProductsComponent from '@/components/Shop/ProductsComponent'
 
 function index() {
 
-  console.log("products, ", products)
   return (
     <>
         <Header/>
         <ShopBanner/>
-        <Filters/>
-        <Products products={products}/>
+        
+        <FilterProvider>
+          <Filters/>
+          <ProductsComponent/>
+        </FilterProvider> 
     </>
   )
 }

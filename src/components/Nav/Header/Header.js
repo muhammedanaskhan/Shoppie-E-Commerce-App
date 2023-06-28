@@ -31,6 +31,10 @@ function Header() {
           </div>
           <div className={styles.right}>
               <div className={styles.MobileView}>
+                <button className={styles.cartBtn} onClick={handleCartClick}>
+                    <div className={styles.cartDiv}><LocalMallIcon fontSize='large'/></div>
+                    <span className={styles.numSpan}>{cart.length}</span>
+                </button>
                 <MobileMenu/>
               </div>
               <div className={styles.DesktopView}>

@@ -79,6 +79,13 @@ p {
   color: black;
 }
 
+.text-s {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  color: black;
+}
+
+
 @media screen and (max-width: 900px) {
   .MuiCheckbox-root {
     color: var(--blue) !important;

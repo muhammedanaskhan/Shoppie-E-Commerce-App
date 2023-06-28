@@ -86,7 +86,10 @@ function Product({
                 ADD TO CART
                 </div>
             )}
-            <div className={classes.btn2}>BUY NOW</div>
+            <Link href={`/products/${id}`}>
+                <div className={classes.btn2}>BUY NOW</div>
+            </Link>
+            
         </div>
 
     

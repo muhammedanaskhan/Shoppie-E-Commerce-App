@@ -2,6 +2,7 @@ import React from 'react'
 import classes from "./FeaturedProducts.module.css";
 import { featureProducts } from '@/constants/constants';
 import ProductCard from '@/components/Home/ProductCard/ProductCard';
+import Link from 'next/link';
 
 
 function FeaturedProducts() {
@@ -17,10 +18,12 @@ function FeaturedProducts() {
             </div>
         </div>
         <div>
-            <button href="/shop" 
+        <Link href='/products' className={classes.a}>
+            <button href="/products" 
                 className={classes.btn}>
                 VIEW ALL PRODUCTS
             </button> 
+        </Link>
         </div>
     </div>
   )

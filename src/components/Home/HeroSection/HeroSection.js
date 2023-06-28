@@ -7,7 +7,7 @@ function HeroSection() {
       <div className={styles.shopContainer}>
         <h1 className={styles.heading}>Latest trendy <br/>fashion for adults</h1>
         <h2 className={styles.subHeading}> Top quality streetwear clothing, experience Fashion at its Finest with Our Curated Range of Stylish Apparel</h2>
-        <Link href='/shop' className={styles.a}>
+        <Link href='/products' className={styles.a}>
           <button className={styles.btn}>SHOP NOW</button>
         </Link>
       </div>

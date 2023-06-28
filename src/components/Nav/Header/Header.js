@@ -7,6 +7,7 @@ import LocalMallIcon from '@mui/icons-material/LocalMall';
 
 import { signOut, useSession } from 'next-auth/react'; 
 import { useRouter } from 'next/router';
+import { CartState } from '@/context/CartContext';
 
 function Header() {
 
@@ -20,6 +21,8 @@ function Header() {
     const handleCartClick = () => {
         router.push('/cart')
     }
+    const {state : {cart}, dispatch} = CartState();
+
     
   return (
       <div className={styles.header}>
@@ -37,7 +40,7 @@ function Header() {
                   
                     <button className={styles.cartBtn} onClick={handleCartClick}>
                         <div className={styles.cartDiv}><LocalMallIcon fontSize='large'/></div>
-                        <span className={styles.numSpan}>(02)</span>
+                        <span className={styles.numSpan}>{cart.length}</span>
                     </button>
                   
                   {!session && 

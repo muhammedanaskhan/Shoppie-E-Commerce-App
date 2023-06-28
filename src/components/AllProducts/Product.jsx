@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { CartState } from '@/context/CartContext';
 
 function Product({
     id,
@@ -24,6 +25,23 @@ function Product({
     function handleMouseLeave() {
     setProductImage(images[0])
     }
+
+    const {state : {cart}, dispatch} = CartState();
+
+    const handleAddToCart = () => {
+        dispatch({
+            type: "ADD_TO_CART",
+            payload: {product: {id, title, images, trending, price, size, rating}}
+        })
+    }
+    const handleRemoveFromCart = () => {
+        dispatch({
+            type: "REMOVE_FROM_CART",
+            payload: id,
+        })
+    }
+
+    // console.log("cart",cart)
   return (
     <div className={classes.card}>
         <div 
@@ -59,13 +77,18 @@ function Product({
 
         </div>
         <div className={classes.buttons}>
-            <div className={classes.btn1}>
+            {cart.some((p) => p.product.id === id) ? (
+                <div className={classes.btn3} onClick={handleRemoveFromCart}>
+                REMOVE FROM CART
+                </div>
+            ) : (
+                <div className={classes.btn1} onClick={handleAddToCart}>
                 ADD TO CART
-            </div>
-            <div className={classes.btn2}>
-                BUY NOW
-            </div>      
+                </div>
+            )}
+            <div className={classes.btn2}>BUY NOW</div>
         </div>
+
     
     </div>
   )

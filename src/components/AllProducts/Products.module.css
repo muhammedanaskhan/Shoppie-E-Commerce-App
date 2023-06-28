@@ -105,9 +105,10 @@
  .buttons{
     display: flex;
     width: 100%;
-justify-content: space-between;
-align-items: center;
-padding: 2rem 2rem;
+   justify-content: center;
+   align-items: center;
+   padding: 2rem 1rem;
+   gap: 15px
 
 }
 
@@ -128,6 +129,22 @@ padding: 2rem 2rem;
     transform: translate(-2px, -2px);
   }
 
+  .btn3{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  font-size: 1.5rem;
+  padding: 2rem 0.5rem;
+  font-weight: 900;
+  background-color: white;
+  border: 3px solid black;
+  height: 20px !important;
+ }
+
+ .btn3:hover{
+   box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+   transform: translate(-2px, -2px);
+ }
 
   .btn2{
     display: flex;

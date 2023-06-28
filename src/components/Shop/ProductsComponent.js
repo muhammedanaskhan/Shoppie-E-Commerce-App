@@ -7,7 +7,7 @@ function ProductsComponent() {
     
   const {test, filteredProducts} = useFilter();
   //console.log("filteredProducts",filteredProducts);
-  console.log("test",test);
+  // console.log("test",test);
 
   return (
     <div>

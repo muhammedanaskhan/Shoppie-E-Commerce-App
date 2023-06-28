@@ -1,3 +1,4 @@
+import Main from '@/components/Cart/Main'
 import { getSession, useSession } from 'next-auth/react'
 import React, { useEffect } from 'react'
 
@@ -5,7 +6,9 @@ function index() {
 
 
   return (
-    <div>cart</div>
+    <>
+        <Main/>
+    </>
   )
 }
 

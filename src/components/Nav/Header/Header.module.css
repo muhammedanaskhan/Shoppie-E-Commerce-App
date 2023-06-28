@@ -100,7 +100,7 @@
     border: none;
 }
 
-.cartBtn:after{
+/* .cartBtn:after{
     content: '';
     position: absolute;
     width: 100%;
@@ -117,7 +117,7 @@
 .cartBtn:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+  } */
 
 .cartSpan{
     display: inline-block;
@@ -146,6 +146,7 @@
 
 .numSpan{
     font-weight: 100px;
+    transform: translateY(-3px);
 }
 
 

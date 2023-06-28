@@ -163,7 +163,7 @@
     .MobileView{
         height: 49.5px;
         display: flex;
-        width: 120px;
+        width: 100px;
         justify-content: space-between;
         align-items: center;
     }

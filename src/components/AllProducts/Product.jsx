@@ -37,7 +37,7 @@ function Product({
     const handleRemoveFromCart = () => {
         dispatch({
             type: "REMOVE_FROM_CART",
-            payload: id,
+            payload: {product: {id, title, images, trending, price, size, rating}}
         })
     }
 

@@ -5,6 +5,8 @@ import Link from 'next/link'
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { CartState } from '@/context/CartContext';
+import { useSession } from 'next-auth/react'; 
+import { useRouter } from 'next/router';
 
 function Product({
     id,
@@ -15,6 +17,10 @@ function Product({
     size,
     rating,
   }) {
+
+    const router = useRouter();
+
+    const { data: session, status } = useSession()    //session = describe active session; loading = nextjs figuring out login
 
   const[productImage, setProductImage] = useState(images[0])
 
@@ -29,10 +35,16 @@ function Product({
     const {state : {cart}, dispatch} = CartState();
 
     const handleAddToCart = () => {
-        dispatch({
-            type: "ADD_TO_CART",
-            payload: {product: {id, title, images, trending, price, size, rating}}
-        })
+        console.log("session",session);
+        if(session){
+            dispatch({
+                type: "ADD_TO_CART",
+                payload: {product: {id, title, images, trending, price, size, rating}}
+            })
+        }else{
+            router.push('/signIn'); 
+        }
+        
     }
     const handleRemoveFromCart = () => {
         dispatch({

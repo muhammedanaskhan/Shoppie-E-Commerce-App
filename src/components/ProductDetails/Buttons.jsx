@@ -1,7 +1,7 @@
 import styles from "./Buttons.module.css";
 
 const Buttons = ({
-  // handleAddToCart,
+  handleAddToCart,
   // handleWishlistButton,
   isInCart,
   // isWishlisted,

@@ -1,5 +1,5 @@
 import products from '@/constants/constants'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './ProductDetails.module.css'
 import StarIcon from "@mui/icons-material/Star";
 import Buttons from './Buttons';
@@ -8,19 +8,21 @@ import { CartState } from '@/context/CartContext';
 function ProductDetails({productId}) {
 
     const product = products.find((product) => product._id === productId);
-    const [isInCart, setIsInCart] = React.useState(false);
-    if (!product) {
-        return <p>Loading...</p>; 
-      }
-
+    const [isInCart, setIsInCart] = useState(false);
     const { state: { cart } } = CartState();
-      useEffect(() => {
 
-        if (cart.some((p) => p.product.id === productId)) {
-          setIsInCart(true);
-        }
-      }, [productId]);
+     useEffect(() => {
+      if (productId && cart.some((p) => p.product.id === productId)) {
+        setIsInCart(true);
+      } else {
+        setIsInCart(false);
+      }
+    }, [cart, productId]);
 
+    if (!product) {
+      return <p>Loading...</p>; 
+    }
+    
     const rating = Math.trunc(Number(product.rating));
     return (
         <div className={styles["container"]}>

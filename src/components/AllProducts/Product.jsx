@@ -14,6 +14,7 @@ function Product({
     images,
     trending,
     price,
+    original_price,
     size,
     rating,
   }) {
@@ -39,7 +40,7 @@ function Product({
         if(session){
             dispatch({
                 type: "ADD_TO_CART",
-                payload: {product: {id, title, images, trending, price, size, rating}}
+                payload: {product: {id, title, images, trending, price, original_price, size, rating}}
             })
         }else{
             router.push('/signIn'); 
@@ -49,7 +50,7 @@ function Product({
     const handleRemoveFromCart = () => {
         dispatch({
             type: "REMOVE_FROM_CART",
-            payload: {product: {id, title, images, trending, price, size, rating}}
+            payload: {product: {id, title, images, trending, price, original_price, size, rating}}
         })
     }
 

@@ -17,20 +17,24 @@ const Main = () => {
 
   return (
     <div className={styles.main}>
-      {products.map((product) => {
-        return (
-          <CartProductCard
-            id={product.product.id}
-            key={product.product.id}
-            title={product.product.title}
-            images={product.product.images}
-            price={product.product.price}
-            size={product.product.size}
-            trending={product.product.trending} 
-            rating={product.product.rating}
-          />
-        )
-      })}
+      <h2>Shopping Bag</h2>
+      <div className={styles.products}>
+        {products.map((product) => {
+          return (
+            <CartProductCard
+              id={product.product.id}
+              key={product.product.id}
+              title={product.product.title}
+              images={product.product.images}
+              price={product.product.price}
+              original_price={product.product.original_price}
+              size={product.product.size}
+              trending={product.product.trending} 
+              rating={product.product.rating}
+            />
+          )
+        })}
+      </div> 
     </div>
   )
 }

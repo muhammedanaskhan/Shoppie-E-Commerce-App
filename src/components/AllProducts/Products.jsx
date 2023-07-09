@@ -3,6 +3,7 @@ import classes from './Products.module.css'
 import Product from '@/components/AllProducts/Product'
 
 function Products({products}) {
+  console.log("products rn",products)
   return (
     <div className={classes.container}>
       {products.map((product) => {
@@ -14,6 +15,7 @@ function Products({products}) {
             title={product.title}
             trending={product.trending}
             price={product.price}
+            original_price={product.original_price}
             size={product.size}
             rating={product.rating}
           />

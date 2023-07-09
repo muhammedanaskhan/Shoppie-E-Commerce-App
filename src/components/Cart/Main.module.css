@@ -1,4 +1,23 @@
 .main{
     width: 100%;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.main h2{
+    font-family: "Clash";
+    font-size: 66px;
+    color: black;
+}
+
+.products{
+    padding-top: 100px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

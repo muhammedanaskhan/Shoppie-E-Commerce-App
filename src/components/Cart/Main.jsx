@@ -1,13 +1,37 @@
 import { CartState } from '@/context/CartContext'
-import React, { createContext } from 'react'
-
+import React, { createContext, useEffect, useState } from 'react'
+import CartProductCard from '@/components/Cart/CartProductCard';
+import styles from './Main.module.css'
 
 const Main = () => {
 
-    const {state : {products}} = CartState();
-    console.log(products)
+    const {state : {cart}, dispatch} = CartState();
+    const [products,setProducts]= useState([]);
+
+    useEffect(() => {
+      setProducts(cart)
+    },cart)
+    
+    console.log("products",products)
+
+
   return (
-    <div>Main</div>
+    <div className={styles.main}>
+      {products.map((product) => {
+        return (
+          <CartProductCard
+            id={product.product.id}
+            key={product.product.id}
+            title={product.product.title}
+            images={product.product.images}
+            price={product.product.price}
+            size={product.product.size}
+            trending={product.product.trending} 
+            rating={product.product.rating}
+          />
+        )
+      })}
+    </div>
   )
 }
 

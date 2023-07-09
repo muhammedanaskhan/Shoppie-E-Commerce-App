@@ -35,7 +35,7 @@ function Product({
     const {state : {cart}, dispatch} = CartState();
 
     const handleAddToCart = () => {
-        console.log("session",session);
+        //console.log("session",session);
         if(session){
             dispatch({
                 type: "ADD_TO_CART",

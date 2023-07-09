@@ -19,7 +19,9 @@ function Header() {
     }
 
     const handleCartClick = () => {
-        router.push('/cart')
+    
+            router.push('/cart')
+        
     }
     const {state : {cart}, dispatch} = CartState();
 

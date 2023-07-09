@@ -1,5 +1,5 @@
 import Main from '@/components/Cart/Main'
-import { getSession, useSession } from 'next-auth/react'
+import { getSession } from 'next-auth/react';
 import React, { useEffect } from 'react'
 
 function index() {
@@ -12,22 +12,22 @@ function index() {
   )
 }
 
-export async function getServerSideProps(context){
-    const session = await getSession({
-        req: context.req
-    })
-    if(!session){
-        return{
-            redirect: {
-                destination: '/signIn',
-                permanent: false        //redirect once
-            }
-        }
+export async function getServerSideProps(context) {
+    const session = await getSession(context);
+    console.log("sesion",session)
+    if (!session) {
+      return {
+        redirect: {
+          destination: '/signIn',
+          permanent: false,
+        },
+      };
     }
-    return{
-        props: { session },
-    }
-}
+  
+    return {
+      props: {},
+    };
+  }
 
 export default index
 

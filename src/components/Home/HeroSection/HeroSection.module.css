@@ -1,0 +1,121 @@
+.heroContainer{
+    display: flex;
+    align-items: center;
+    padding-left: 15rem;
+    background-image: url("https://huckberry.imgix.net/pages/3-0_featured_365shorts_2303-7b9c3911e0.jpg?auto=format%2C%20compress&amp;crop=top&amp;fit=clip&amp;cs=tinysrgb&amp;ixlib=react-9.5.2") ;
+    height: 80vh;
+    background-size: cover;
+    /* padding-top: 12rem;
+    padding-left: 15rem; */
+
+}
+.shopContainer{ 
+    font-family: "Clash";
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    letter-spacing: 0.2rem;
+    align-items: center;
+    text-shadow: 2px 1px black;
+}
+
+.heading{
+    width: 100%;
+    font-size: 5rem;
+    font-weight: 500px;
+}
+
+.subHeading{
+    font-size: 2rem;
+    font-weight: 1rem;
+    margin-top: 2rem;
+}
+
+.a{
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.btn{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    min-width: max-content;
+    padding: 10px 25px;
+    letter-spacing: 2px;
+    line-height: 2; 
+    font-weight: 400px;
+    transition: 250ms ease;
+    background-color: hsla(0, 0%, 100%, 1);
+    color: black;
+    border: 2px solid hsla(0, 0%, 7%, 1);
+    box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+}
+
+.btn:is(:hover, :focus-visible) { 
+    box-shadow: none; 
+    cursor: pointer; 
+    transform: scale(1.025) perspective(1px)
+}
+
+@media only screen and (max-width: 1742px) {
+    .heroContainer{
+        height: 80vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 901px) {
+    .heroContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .shopContainer{ 
+        width: 35rem;
+    }
+
+    .heading{
+        font-size: 3.5rem;
+    }
+
+    .subHeading{
+        font-size: 1.5rem;
+        font-weight: 1rem;
+        margin-top: 1.2rem;
+    }
+
+    .btn{
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 1.8rem;
+        min-width: max-content;
+        padding: 5px 15px;
+        letter-spacing: 2px;
+        line-height: 2; 
+        font-weight: 400px;
+        transition: 250ms ease;
+        background-color: hsla(0, 0%, 100%, 1);
+        color: black;
+        border: 2px solid hsla(0, 0%, 7%, 1);
+        box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+    }
+}

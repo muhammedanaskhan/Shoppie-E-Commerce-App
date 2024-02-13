@@ -1,0 +1,552 @@
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.desktopDiv{
+    position: relative;
+    color: black;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.25px solid gray !important;
+}
+
+.mobileDiv{
+    position: relative;
+    color: black;
+    display: none;
+    width: 90%;
+    flex-wrap: wrap;
+    border-bottom: 0.25px solid gray !important;
+}
+
+.leftFilters{
+    display: flex;
+width: fit-content;
+}
+
+.filter{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.25px solid gray;
+    border-bottom: none;
+    border-top: none;
+    height: 68px !important;
+    background-color: #FEFEFF;
+    padding: 10px 20px;
+}
+
+.activeFilter{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68px !important;
+    border: 0.25px solid gray;
+    border-bottom: none;
+    background-color:  rgb(231, 228, 228);
+    padding: 10px 20px;
+
+}
+
+
+.filter h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+}
+
+.activeFilter h3{
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+}
+.expandIcon{
+    width: 3rem !important;
+    height: 3rem !important;
+    font-weight: 300 !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.filterContainer{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 237px !important;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    border: 0.25px solid gray !important;
+    transform: translateY(100%);
+    animation: fadeIn 0.3s ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.filterTop{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterBottom{
+    width: 100%;
+    height: 108px !important;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    padding: 2rem 3rem;
+    border-top: 0.25px solid gray !important;
+  }
+
+  .filterBottom button:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size: 2.5rem;
+   padding: 3rem 3rem;
+   font-weight: 900;
+   background-color: white;
+   border: 3px solid black;
+   height: 66px !important;
+  }
+
+
+  .filterBottom button:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size: 2.5rem;
+   padding: 3rem 3rem;
+   font-weight: 900;
+   color: white;
+   background-color: black;
+   border: none;
+   height: 66px !important;
+  }
+.priceFilter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+    padding-left: 10px;
+    height: 49px !important;
+    padding-right: 10px;
+  }
+
+  .priceSlider {
+    font-size: 2rem;
+    color: black !important;
+  }
+  .priceFilter p:first-child {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    text-align: right;
+  }
+  .priceFilter p:last-child {
+    display: flex;
+    justify-content: center;
+    width: 5rem;
+    text-align: left;
+  }
+
+  .filterContainer.fadeOut {
+    animation: fadeIn 0.3s ease-in-out backwards;
+  }
+
+  .categoryFilter{
+    height: 49px !important;
+  }
+
+  .sizeFilter{
+    height: 49px !important;
+  }
+
+  .ratingFilter{
+    height: 49px !important;
+  }
+
+  .sortFilter{
+    height: 49px !important;
+  }
+
+  .sortFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 5rem !important;
+  }
+
+    
+  .ratingFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 5rem !important;
+  }
+
+  
+  .categoryFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 5rem !important;
+  }
+
+  .sizeFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 5rem !important;
+  }
+
+  .checkboxContainer{
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .ratingCheckboxContainer{
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(90%);
+    }
+  }
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(90%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(100%);
+    }
+  }
+
+  @media screen and (max-width: 1439px){
+    
+  .ratingFilter{
+    display: flex;
+    justify-content: center;
+    height: 102px !important;
+  }
+
+    
+  .ratingFilter div:first-child {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 5rem !important;
+  }
+
+  .ratingCheckboxContainer{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  }
+
+@media screen and (max-width: 900px) {
+    .filter{
+        padding: 8px 15px;
+        gap: 4px;
+        height: 48px !important;
+    }
+    
+    .activeFilter{
+        padding: 8px 15px;
+        gap: 4px;
+        height: 48px !important;
+    }
+
+    .filterBottom{
+        height: 88px !important;
+    }
+
+ 
+
+  .filterBottom button:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size: 1.5rem;
+   padding: 2rem 2rem;
+   font-weight: 900;
+   background-color: white;
+   border: 3px solid black;
+   height: 48px !important;
+  }
+
+
+  .filterBottom button:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size: 1.5rem;
+   padding: 2rem 2rem;
+   font-weight: 900;
+   color: white;
+   background-color: black;
+   border: none;
+   height: 48px !important;
+  }
+
+
+  
+
+  
+  .categoryFilter {
+    height: 102px !important;
+   /*  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 3rem 1rem !important;  */
+  }
+
+  .categoryFilter div:first-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 5rem !important;
+  }
+
+  .sizeFilter div:first-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem 5rem !important;
+  }
+
+  .ratingFilter{
+    display: flex;
+    justify-content: center;
+    height: 102px !important;
+  }
+
+    
+  .ratingFilter div:first-child {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 5rem !important;
+  }
+
+  .ratingCheckboxContainer{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+
+  .checkboxContainer{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+    
+    .filter h3{
+        font-size: 1.5rem;
+    }
+    
+    .activeFilter h3{
+        font-size: 1.5rem;
+    }
+    .expandIcon{
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+}
+
+@media screen and (max-width: 763px) {
+
+  .sortFilter{
+    height: 49px !important;
+  }
+
+  .sortFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 629px) {
+
+  .sortFilter{
+    height: 102px !important;
+  }
+
+  .sortFilter div:first-child {
+    display: flex !important;
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+  }
+}
+
+
+@media screen and (max-width: 620px) {
+  .ratingCheckboxContainer{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .ratingFilter div:first-child {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 2rem !important;
+  }
+}
+
+@media screen and (max-width: 779px) {
+  .sizeFilter{
+    height: 102px !important;
+  }
+}
+    
+@media screen and (max-width: 612px) {
+
+
+    .filter{
+    
+        border-bottom: 0.25px solid gray;
+    }
+    
+    .activeFilter{
+
+        border-bottom: 0.25px solid gray;
+
+    }
+
+    .priceSlider {
+        font-size: 1rem !important;
+        color: black !important;
+      }
+
+    .desktopDiv{
+        display: none;
+    }
+
+    .mobileDiv{
+        display: flex;
+        border-right: 0.25px solid gray !important;;
+    }
+}
+
+@media screen and (max-width: 488px) {
+  .sizeFilter div:first-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 0.5rem 2.5rem !important;
+  }
+}
+
+@media screen and (max-width: 463px) {
+    .checkboxContainer{
+        display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+}
+
+@media screen and (max-width: 414px) {
+  .ratingCheckboxContainer{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+
+}
+
+
+@media screen and (max-width: 375px) {
+  .ratingFilter div:first-child {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem 1rem !important;
+  }
+
+}
+@media screen and (max-width: 397px) {
+
+    .checkboxContainer{
+        display: flex;
+        padding-left: 20px;
+        padding-right: 10px;
+      }
+    .categoryFilter div:first-child {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 0.5rem 2.5rem !important;
+      }
+
+      .sizeFilter div:first-child {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 0.5rem 2.5rem !important;
+      }
+    
+}
+
+
+@media screen and (max-width: 355px) {
+  .sizeFilter div:first-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 0.5rem 1rem !important;
+  }
+  
+}
+
+@media screen and (max-width: 315px) {
+    .filter{
+        padding: 6px 10px;
+        gap: 4px;
+    }
+    
+    .activeFilter{
+        padding: 6px 10px;
+        gap: 4px;
+    }
+    
+    
+    .filter h3{
+        font-size: 1.25rem;
+    }
+    
+    .activeFilter h3{
+        font-size: 1.25rem;
+    }
+    .expandIcon{
+        width: 1.75rem !important;
+        height: 1.75rem !important;
+    }
+}
+

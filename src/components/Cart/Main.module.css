@@ -1,0 +1,274 @@
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    position: relative;
+}
+
+.main h2{
+    font-family: "Clash";
+    font-size: 66px;
+    color: black;
+}
+
+.footerCartEmpty{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.products{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cartImg{
+    width: 700px;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 100px;
+}
+
+.emptyCartDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyCartDiv p{
+    font-size: 66px;
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.checkOutDiv{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 20px;
+    align-items: center;
+}
+.checkOutDiv h2{
+    font-size: 5rem;
+    font-family: "Raleway", sans-serif;
+}
+
+.totalSum{
+    
+    font-size: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.checkoutBtn{
+    background-color: hsla(18, 97%, 62%, 1);;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: black;
+width: 350px;
+height: 65px;
+ font-size: 2rem;
+ letter-spacing: 2px;
+   line-height: 2; 
+ border: 2px solid hsla(0, 0%, 7%, 1);
+ box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+ font-weight: 400px;
+ transition: 250ms ease;
+ margin-bottom: 100px;
+}
+
+.checkoutBtn:is(:hover, :focus-visible) { 
+    box-shadow: none; 
+    cursor: pointer; 
+    transform: scale(1.025) perspective(1px)
+}
+.btn{
+    background-color: hsla(18, 97%, 62%, 1);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+   width: 350px;
+   height: 65px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+      line-height: 2; 
+    border: 2px solid hsla(0, 0%, 7%, 1);
+    box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+    font-weight: 400px;
+    transition: 250ms ease;
+    margin-top: 50px;
+}
+
+.btn:is(:hover, :focus-visible) { 
+    box-shadow: none; 
+    cursor: pointer; 
+    transform: scale(1.025) perspective(1px)
+}
+
+@media screen and (max-width: 1313px){
+    .products{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1009px){
+   
+.checkOutDiv{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+}
+}
+
+@media screen and (max-width: 875px){
+
+
+    .checkOutDiv{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+    }
+
+@media screen and (max-width: 940px){
+
+    .cartImg{
+        width: 500px;
+    }
+
+    .emptyCartDiv p{
+        font-size: 45px;
+        color: black;
+        margin-top: 50px;
+        text-align: center;
+    }
+    
+    .btn{
+        margin-top: 35px;
+
+    width: 350px;
+    height: 65px;
+     font-size: 1.75rem;
+     letter-spacing: 2px;
+       line-height: 2; 
+     border: 2px solid hsla(0, 0%, 7%, 1);
+     box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+     font-weight: 400px;
+     transition: 250ms ease;
+     margin-top: 50px;
+    }
+}
+@media screen and (max-width: 450px){
+    .checkOutDiv h2{
+        margin-top: 30px;
+        font-size: 3rem !important;
+        font-family: "Raleway", sans-serif;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .checkOutDiv h2{
+        margin-top: 30px;
+        font-size: 2rem !important;
+        font-family: "Raleway", sans-serif;
+    }
+    
+    .totalSum{
+        font-size: 2rem !important;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+@media screen and (max-width: 600px){
+
+    .cartImg{
+        margin-top: 50px;
+        width: 250px;
+    }
+
+    .emptyCartDiv p{
+        font-size: 30px;
+        color: black;
+        margin-top: 25px;
+        text-align: center;
+    }
+    .main h2{
+        font-size: 35px;
+    }
+
+
+    .checkOutDiv{
+        gap: 20px;
+    }
+       
+    .checkOutDiv h2{
+        font-size: 4rem;
+        font-family: "Raleway", sans-serif;
+    }
+
+    .checkoutBtn{
+        width: 250px;
+        height: 45px;
+         font-size: 1.25rem;
+         letter-spacing: 2px;
+           line-height: 2; 
+         border: 2px solid hsla(0, 0%, 7%, 1);
+         box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+         font-weight: 400px;
+         transition: 250ms ease;
+         margin-bottom: 60px;
+    }
+    .btn{
+        margin-top: 35px;
+
+    width: 250px;
+    height: 45px;
+     font-size: 1.25rem;
+     letter-spacing: 2px;
+       line-height: 2; 
+     border: 2px solid hsla(0, 0%, 7%, 1);
+     box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+     font-weight: 400px;
+     transition: 250ms ease;
+     margin-top: 25px;
+    }
+}
+@media screen and (max-width: 700px){
+
+
+    .checkOutDiv h2{
+        margin-top: 30px;
+        font-size: 3.5rem;
+        font-family: "Raleway", sans-serif;
+    }
+    
+    .totalSum{
+        
+        font-size: 3.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .main{
+        padding-top: 50px;
+    }
+
+
+    
+.products{
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+    
+}
+    

@@ -1,0 +1,181 @@
+.header{
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  height: 49.5px;
+}
+
+.MobileView{
+    display: none;
+}
+
+.DesktopView{
+    display: flex;
+    gap: 5rem;
+}
+.DesktopView a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    color: #000000;
+}
+.DesktopView p{
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 2; 
+    font-weight: 500px;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+.DesktopView p:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+
+.DesktopView p:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+/* .DesktopView p:is(:hover, :focus-visible) { 
+    box-shadow: none; 
+    cursor: pointer; 
+    transform: scale(1.02) perspective(1px)
+} */
+
+.btn{
+     background-color: hsla(0, 0%, 100%, 1);
+  display: flex;
+  align-items: center;
+  color: black;
+  max-width: max-content;
+  font-size: 1.2rem;
+  min-width: max-content;
+  padding: 10px 25px;
+  letter-spacing: 2px;
+    line-height: 2; 
+  border: 2px solid hsla(0, 0%, 7%, 1);
+  box-shadow: 4px 4px 0px hsla(0, 0%, 7%, 1);
+  font-weight: 400px;
+  transition: 250ms ease;
+}
+
+.cartBtn{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    font-size: 2rem;
+    gap: 5px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 2;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+/* .cartBtn:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+
+.cartBtn:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  } */
+
+.cartSpan{
+    display: inline-block;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500px;
+}
+
+.cartSpan:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .cartSpan:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.numSpan{
+    font-weight: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.cartDiv{
+    transform: translateY(2px);
+}
+.btn:is(:hover, :focus-visible) { 
+    box-shadow: none; 
+    cursor: pointer; 
+    transform: scale(1.025) perspective(1px)
+}
+
+@media only screen and (max-width: 1120px) {
+    .MobileView{
+        height: 49.5px;
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header{
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .DesktopView{
+        display: none;
+    }
+}
+  

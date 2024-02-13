@@ -1,0 +1,63 @@
+.banner {
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+    background-image: url('/assets/images/banner1.jpg');
+    background-position: center;
+    background-size: cover;
+    animation: changeBackgroundImage  10s infinite;
+    animation-timing-function: steps(1);
+}
+
+.slogan {
+    font-family: 'Clash';
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+}
+
+
+
+
+@keyframes changeBackgroundImage {
+    0% {
+      background-image: url('/assets/images/banner1.jpg');
+    }
+    50% {
+      background-image: url('/assets/images/banner2.jpg');
+    }
+    75% {
+      background-image: url('/assets/images/sneakerBanner.jpg');
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .slogan {
+      font-family: 'Clash';
+      letter-spacing: 1px;
+      font-weight: 300;
+      font-size: 3rem;
+      line-height: 4rem;
+  }
+  
+  }
+  
+  @media screen and (max-width: 540px) {
+
+    .slogan {
+      font-family: 'Clash';
+      letter-spacing: 1px;
+      font-weight: 300;
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+  }
+  
+  }
+  

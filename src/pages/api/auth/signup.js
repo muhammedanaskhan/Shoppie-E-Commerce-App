@@ -27,10 +27,14 @@ async function handler(req, res) {
         password: encryptedPassword,
     }
 
+    console.log('newUserAccount',newUserAccount)
+
     //connecting to db
     let client;
     try {
+        console.log('client1',client)
         client = await connectToDb();
+        console.log('client',client)
         if (!client) throw new Error('Database Connection Failed');
     }
     catch (error) {

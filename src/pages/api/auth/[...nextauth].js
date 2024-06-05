@@ -12,6 +12,7 @@ export default NextAuth({
         CredentialsProvider({   
           async authorize(credentials) {
            const client = await connectToDb();
+           console.log("client",client)
 
             if(!client){
               throw new Error('Could not connect to database');
@@ -19,11 +20,9 @@ export default NextAuth({
               console.log('connect to database');
             }
 
-          //  const userDb = client.db()
-          //  console.log("userDb",userDb)
+           const userDb = client.db()
 
            const usersCollection = client.db().collection('users')
-           //console.log("usersCollection",usersCollection)
 
            const user = await usersCollection.findOne({email: credentials.email})
            if(!user){
